@@ -27,6 +27,11 @@ if (isServer) then {
 	[] call compileFinal preprocessFileLineNumbers "scripts\server\init_server.sqf";
 };
 
+if (hasInterface || isServer) then
+ {
+ [] call compileFinal preprocessFileLineNumbers "addons\welcome\welcome.sqf";
+ };
+ 
 if (!isDedicated && !hasInterface && isMultiplayer) then {
 	[] spawn compileFinal preprocessFileLineNumbers "scripts\server\offloading\hc_manager.sqf";
 };
