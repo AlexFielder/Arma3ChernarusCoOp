@@ -20,7 +20,7 @@ switch (KP_liberation_preset) do {
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\classnames.sqf";
 
 [] execVM "GREUH\scripts\GREUH_activate.sqf";
-
+[] execVM "scripts\server\RestartTimer.sqf";
 [] call compileFinal preprocessFileLineNumbers "scripts\shared\init_shared.sqf";
 
 if (isServer) then {

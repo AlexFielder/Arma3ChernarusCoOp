@@ -39,3 +39,14 @@ if (!isDedicated && hasInterface) then {
 };
 
 if (KP_liberation_debug) then {private _text = format ["[KP LIBERATION] [DEBUG] init.sqf done for: %1", debug_source];_text remoteExec ["diag_log",2];};
+
+_pic = "Pictures\logo.paa";
+	[
+		'<img align=''left'' size=''1.5'' shadow=''0'' image='+(str(_pic))+' />',
+		safeZoneX+0.00,
+		safeZoneY+safeZoneH-0.12,
+		99999,
+		0,
+		0,
+		3090
+	] spawn bis_fnc_dynamicText;
